@@ -12,14 +12,34 @@
             margin-top: 50px;
         }
 
+        #clock-container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(221, 244, 241);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+
+        }
+
         #clock {
             font-size: 48px;
             font-weight: bold;
             color: #333;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background-color: rgb(255, 250, 243);
         }
 
         #heading {
             margin-bottom: 20px;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+
         }
     </style>
 </head>
@@ -27,11 +47,20 @@
 <body>
     <div id="clock-container">
         <div id="heading">
-            <h3>Digital Clock</h3>
+            <h2>Digital Clock</h2>
             <p>Display current time in hours, minutes and seconds.</p>
         </div>
+        <div id="time">
+            <div id="clock" >
 
-        <div id="clock"></div>
+            </div>
+
+            <div class="labels">
+                <span>Hours</span>
+                <span>Minutes</span>
+                <span>Seconds</span>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -47,7 +76,8 @@
             seconds = (seconds < 10 ? "0" : "") + seconds;
 
             document.getElementById("clock").innerHTML =
-                hours + ":" + minutes + ":" + seconds;
+                hours + "   :   " + minutes + "   :   " + seconds;
+
         }
 
         setInterval(updateclock, 1000);
