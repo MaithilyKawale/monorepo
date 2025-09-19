@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image-Slider</title>
+    <style>
+
+        .image {
+            height: 300px;
+            border-radius: 20px;
+            margin-left: 500px;
+            margin-top: 50px;
+
+        }
+
+        .btn {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: none;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .btn-img {
+            height: 120%;
+            width: 120%;
+        }
+
+        #left-btn {
+            left: 475px;
+            margin-top: -150px;
+
+        }
+
+        #right-btn {
+            left: 927px;
+            margin-top: -55px;
+        }
+
+        #left-btn:hover {
+            background-color: lightgray;
+            transform: translate(-5px, -50%);
+        }
+
+        #right-btn:hover {
+            background-color: lightgray;
+            transform: translate(5px, -50%);
+        }
+    </style>
 </head>
+
 <body>
     
+    <div id="slide-container">
+
+        <img src="./images/img1.jpeg" alt="Slide Image" id="slide" class="image">
+
+
+        <button type="button" class="btn" id="left-btn" onclick="previous()">
+            <img src="./images/left-arrow.png" alt="Previous" class="btn-img">
+        </button>
+
+        <button type="button" class="btn" id="right-btn" onclick="next()">
+            <img src="./images/right.png" alt="Next" class="btn-img">
+        </button>
+    </div>
+    <script>
+        const image = document.getElementById('slide');
+
+        const images = [
+            './images/img1.jpeg',
+            './images/img2.jpeg',
+            './images/img3.jpeg',
+            './images/img4.jpeg'
+        ];
+
+        let index = 0;
+
+        function showImage() {
+            image.src = images[index];
+            image.style.height = "300px";   
+            image.style.width = "455px";   
+            image.style.objectFit = "cover";
+        }
+
+        function next() {
+            index = (index + 1) % images.length;
+            showImage();
+        }
+
+        function previous() {
+            index = (index - 1 + images.length) % images.length;
+            showImage();
+        }
+        
+        showImage();
+    </script>
+
 </body>
+
 </html>
