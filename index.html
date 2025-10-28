@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful ToDo App</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .heading {
+      text-align: center;
+      color: #fff;
+      margin-top: 30px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .task-input-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .task-input {
+      width: 350px;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: 2px solid #ffffff;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .btn-add {
+      border-radius: 30px;
+      background-color: #00aaff;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .btn-add:hover {
+      background-color: #0088cc;
+      transform: scale(1.05);
+    }
+
+    .tasks-container {
+      width: 70%;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      margin-top: 30px;
+      padding: 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      height: auto;
+    }
+
+    .todo-item {
+      background: linear-gradient(90deg, #d4e0ff, #eef3ff);
+      padding: 12px 18px;
+      margin: 10px 0;
+      border-radius: 10px;
+      color: #333;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .todo-item:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-del {
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      padding: 6px 12px;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    .btn-del:hover {
+      background-color: #e60000;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .task-input {
+        width: 70%;
+      }
+
+      .btn-add {
+        padding: 10px 20px;
+      }
+
+      .tasks-container {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Todo App</h1>
+  <h1 class="heading">✨ ToDo App ✨</h1>
+
+  <div id="tasks-container" class="tasks-container"></div>
+
+  <div class="task-input-container">
+    <input type="text" id="task-input" placeholder="Enter a new task..." class="task-input" />
+    <button onclick="addTask()" class="btn-add">Add Task</button>
+  </div>
+
+  <script>
+
+    let tasks = [];
+
+    function loadTasks() {
+      const tasksContainer = document.getElementById("tasks-container");
+      tasksContainer.innerHTML = ""; 
+
+      for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+
+        const taskDiv = document.createElement("div");
+        taskDiv.className = "todo-item";
+
+        const taskText = document.createElement("span");
+        taskText.textContent = task;
+
+        const delBtn = document.createElement("button");
+        delBtn.className = "btn-del";
+        delBtn.textContent = "Delete";
+        delBtn.onclick = function () {
+          deleteTask(i);
+        };
+
+        taskDiv.appendChild(taskText);
+        taskDiv.appendChild(delBtn);
+
+        tasksContainer.appendChild(taskDiv);
+      }
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1); 
+      loadTasks(); 
+    }
+
+    function addTask() {
+      const input = document.getElementById("task-input");
+      const task = input.value.trim();
+
+      if (task === "") {
+        alert("⚠️ Please enter a task!");
+        return;
+      }
+
+      tasks.unshift(task);
+
+      loadTasks();
+      input.value = "";
+    }
+  </script>
+
 </body>
+
 </html>
