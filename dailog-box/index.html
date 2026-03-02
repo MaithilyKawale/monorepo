@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Dailog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #84d8be;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px;
+    }
+
+    main h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #185a9d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    dialog {
+      border: none;
+      border-radius: 15px;
+      padding: 30px;
+      width: 320px;
+      background: #fff;
+      color: black;
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      color: #185a9d;
+    }
+
+    input {
+      width: 93%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      background: #185a9d;
+      color: white;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .login-btn:hover {
+      background: #43cea2;
+    }
+
+    #closeBtn{
+      margin-top: 2px;
+      width: 100%;
+      align-items: center;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🌐 My Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button id="openBtn">Login</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome to My Website</h2>
+    <p>This is a simple home page with a stylish login dialog box.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website. All Rights Reserved.</p>
+  </footer>
+
+  <dialog id="loginDialog">
+    <h3>🔒 Login</h3>
+    <form method="dialog">
+      <input type="text" placeholder="Enter Username" required>
+      <input type="password" placeholder="Enter Password" required>
+      <button class="login-btn">Login</button>
+      <button id="closeBtn" type="button">Cancel</button>
+    </form>
+  </dialog>
+
+  <script>
+    const dialog = document.getElementById("loginDialog");
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    openBtn.addEventListener("click", () => dialog.showModal());
+    closeBtn.addEventListener("click", () => dialog.close());
+  </script>
+
+</body>
+
+</html>
