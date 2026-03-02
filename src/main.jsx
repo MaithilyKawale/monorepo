@@ -1,24 +1,10 @@
-import { createRoot } from 'react-dom/client'
-import React from 'react'
-import { useState } from 'react'
-import Home from './views/Home.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-
-function App() {
-  const [emoji,setemoji]=useState("😀")
-
-
-    return (
-      <div>
-        <h1>Emoji Interpreter</h1>
-        <div>
-          {Home}
-        </div>
-        
-      </div>
-
-    )
-}
-createRoot(document.getElementById('root')).render(
-    <App />
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+<React.StrictMode>
+<App />
+</React.StrictMode>
+);
