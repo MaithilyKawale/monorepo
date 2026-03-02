@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Operation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #text-container {
+            text-align: center;
+            margin-top: 50px;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 400px;
+            align-content: center;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .btn {
+            border-radius: 20px;
+            background-color: lightblue;
+            color: black;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 200px;
+        }
+
+        .btn:hover {
+            background-color: rgb(148, 191, 205);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text-container">
+        <h1>Text Operation</h1>
+
+        <input type="text" id="text-input" placeholder="Enter your text here">
+
+        <br>
+        <button class="btn" id="words-btn" onclick="words()">Total words</button>
+        <button class="btn" id="characters-btn" onclick="characters()">Total characters</button>
+        <button class="btn" id="uppercase-btn" onclick="uppercase()">Uppercase</button>
+        <button class="btn" id="lowercase-btn" onclick="lowercase()">Lowercase</button>
+        <button class="btn" id="clear-btn" onclick="clearOutput()">Clear</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function words() {
+            let text = document.getElementById("text-input").value.trim();
+            let wordCount = text === "" ? 0 : text.split(/\s+/).length;
+            document.getElementById("output").innerText = "Total Words: " + wordCount;
+        }
+
+        function characters() {
+            let text = document.getElementById("text-input").value;
+            document.getElementById("output").innerText = "Total Characters: " + text.length;
+        }
+
+        function uppercase() {
+            let text = document.getElementById("text-input").value;
+            document.getElementById("output").innerText = text.toUpperCase();
+        }
+
+        function lowercase() {
+            let text = document.getElementById("text-input").value;
+            document.getElementById("output").innerText = text.toLowerCase();
+        }
+
+        function clearOutput() {
+            let text = document.getElementById("text-input").value = "";
+            document.getElementById("output").innerText = "";
+        }
+    </script>
+</body>
+
+</html>
