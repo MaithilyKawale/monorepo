@@ -1,0 +1,61 @@
+body {
+  background: #eef2f3;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-box {
+  width: 450px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-box:hover {
+  box-shadow: 0 6px 20px oklch(88.5% 0.062 18.334);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: oklch(80.8% 0.114 19.571);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: oklch(80.8% 0.114 19.571);
+  padding: 10px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
