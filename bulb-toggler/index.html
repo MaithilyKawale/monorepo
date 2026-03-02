@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulb Toggler</title>
+  <style>
+    body {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #eaeaea;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #card {
+      width: 350px;
+      height: 350px;
+      background-color: #fffcfc;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-left: red 5px solid;
+      border-right: green 5px solid;
+    }
+
+    #img-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100px;
+    }
+
+    #onbutton {
+      background-color: #2cc90c;
+    }
+
+    #offbutton {
+      background-color: #fc5047;
+    }
+
+    #onbutton:hover {
+      background-color: #28b00a;
+    }
+
+    #offbutton:hover {
+      background-color: #e03c3a;
+    }
+
+   @media (max-width: 480px) {
+      h2 {
+        font-size: 1.3rem;
+      }
+      #card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+      }
+
+      
+
+      img {
+        max-width: 150px;
+        height: auto;
+        width: 100%;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) and (min-width: 481px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      img {
+        max-width: 180px;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card">
+    <h2 id="heading">Bulb Toggler</h2>
+    <div id="img-card">
+      <img src="light-bulb-off.png" alt="off" id="bulb">
+    </div>
+
+    <div class="btn-group">
+      <button type="button" id="onbutton" onclick="bulbOn()">ON</button>
+      <button type="button" id="offbutton" onclick="bulbOff()">OFF</button>
+    </div>
+  </div>
+
+  <script>
+    const bulbElement = document.getElementById('bulb');
+    const headingElement = document.getElementById('heading');
+    const card = document.getElementById('card');
+    const body = document.body;
+
+    function bulbOn() {
+      bulbElement.src = "light-bulb-on.png";
+      heading.style.color = "#2cc90c";
+      card.style.backgroundColor = "#f0fff0";
+      body.style.backgroundColor = "#ffffff";
+
+    }
+    function bulbOff() {
+      bulbElement.src = "light-bulb-off.png";
+      heading.style.color = "#e03c3a";
+      card.style.backgroundColor = "#fffcfc";
+      body.style.backgroundColor = "#404040";
+    }
+  </script>
+</body>
+
+</html>
