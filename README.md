@@ -10,10 +10,10 @@
 | digital-clock | [Visit](https://maiths-digital-clock.netlify.app/) |
 | image-slider | [Visit](https://maiths-image-slider.netlify.app/) |
 | react-assignment-2 | [Visit](https://maiths-portfolio-14.netlify.app/) |
-| react-assignment-3 | [Visit](https://maiths-ra-3.netlify.app/)|
-| react-assignment-4 | [Visit](https://emojieditor14.netlify.app/) |
-| react-assignment-5 | [Visit](https://reactregistrationform.netlify.app/) |
-| react-assignment-6 | [Visit](https://reactcardlist.netlify.app/) |
+| basic-portfolio | [Visit](https://maiths-ra-3.netlify.app/)|
+| emoji-editor | [Visit](https://emojieditor14.netlify.app/) |
+| registration-form | [Visit](https://reactregistrationform.netlify.app/) |
+| cardlist | [Visit](https://reactcardlist.netlify.app/) |
 | text-operation | [Visit](https://text-operationtool.netlify.app/) |
 | todo-app | [Visit](https://maiths-todo-app.netlify.app/) |
 
