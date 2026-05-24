@@ -16,5 +16,6 @@
 | cardlist | [Visit](https://reactcardlist.netlify.app/) |
 | text-operation | [Visit](https://text-operationtool.netlify.app/) |
 | todo-app | [Visit](https://maiths-todo-app.netlify.app/) |
-
+| vegetableapp | [Visit](https://veggieapp.netlify.app/) |
+| quiz-app | [Visit](https://quizapp-14.netlify.app/) |
 
