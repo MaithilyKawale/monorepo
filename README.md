@@ -18,4 +18,7 @@
 | todo-app | [Visit](https://maiths-todo-app.netlify.app/) |
 | vegetableapp | [Visit](https://veggieapp.netlify.app/) |
 | quiz-app | [Visit](https://quizapp-14.netlify.app/) |
+| doms-website | [Visit](https://domswebsite.netlify.app/) |
+| interview-website | [Visit](https://careerquest14.netlify.app/) |
+| moviezone | [Visit](https://reactjs-moviezone1.netlify.app/) |
 
