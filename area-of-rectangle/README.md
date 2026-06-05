@@ -18,3 +18,6 @@ npm start
 useState for controlled inputs
 Arithmetic operations in JSX
 Event handling with onChange
+
+🧮 Formula
+Area = Length × Width
