@@ -1,107 +1,71 @@
 # 📐 Area of Rectangle Calculator
 
-<div align="center">
+A simple and beginner-friendly web application that calculates the **area of a rectangle** based on the length and width entered by the user.
 
-✨ **A simple and interactive React application that calculates the area of a rectangle in real time.** ✨
-
-![React](https://img.shields.io/badge/React-JS-blue?style=for-the-badge&logo=react)
-![Beginner Friendly](https://img.shields.io/badge/Beginner-Friendly-success?style=for-the-badge)
-![Open Source](https://img.shields.io/badge/Open%20Source-Learning-orange?style=for-the-badge)
-
-</div>
+This project is built using **HTML**, **CSS**, and **JavaScript** and is designed to help beginners understand basic web development concepts such as DOM manipulation, event handling, and user input processing.
 
 ---
 
-## 🚀 Overview
+## 🚀 Features
 
-The **Area of Rectangle Calculator** is a beginner-friendly React project that allows users to calculate the area of a rectangle by simply entering its **length** and **width**.
-
-The application updates the result instantly whenever the input values change, making it a great project for learning React fundamentals.
-
----
-
-## ✨ Features
-
-✅ Real-time area calculation
-
-✅ User-friendly input fields
-
-✅ Instant updates without page refresh
-
-✅ Clean and responsive interface
-
-✅ Beginner-friendly React code structure
-
-✅ Fast and lightweight application
+* 📏 Enter rectangle length and width
+* 🧮 Calculate area with a single click
+* ⚡ Instant result display
+* 🎨 Clean and simple user interface
+* 📱 Responsive card-based layout
+* 💻 Beginner-friendly code structure
 
 ---
 
-## 🖥️ Preview
+## 🖼️ Preview
 
 ```text
-+---------------------------+
-|   Area Calculator 📐      |
-+---------------------------+
-| Length : [      ]         |
-| Width  : [      ]         |
-|                           |
-| Area = 120 sq units       |
-+---------------------------+
++----------------------------------+
+|   Calculate Area of Rectangle    |
++----------------------------------+
+| Length : [____________]          |
+| Width  : [____________]          |
+| Area   : [____________]          |
+|                                  |
+| [ Area of Rectangle ]            |
++----------------------------------+
 ```
 
 ---
 
 ## 🧮 Formula Used
 
-The area of a rectangle is calculated using:
-
 ```text
 Area = Length × Width
 ```
 
-Example:
+### Example
 
 ```text
 Length = 10
-Width  = 12
+Width  = 5
 
-Area = 10 × 12 = 120
+Area = 50
 ```
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Built With
 
-- ⚛️ React.js
-- 🟨 JavaScript (ES6+)
-- 🎨 CSS3
-- 🌐 HTML5
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
 
 ---
 
 ## 📚 Concepts Covered
 
-This project helps beginners understand:
-
-### 🔹 React Hooks
-
-- `useState`
-- State management
-
-### 🔹 Controlled Components
-
-- Handling form inputs
-- Managing user-entered data
-
-### 🔹 Event Handling
-
-- `onChange` events
-- Real-time updates
-
-### 🔹 JSX Operations
-
-- Rendering dynamic values
-- Arithmetic calculations inside JSX
+* DOM Manipulation
+* Event Handling
+* User Input Validation
+* JavaScript Functions
+* Arithmetic Operations
+* Dynamic Content Updates
 
 ---
 
@@ -110,71 +74,68 @@ This project helps beginners understand:
 ```bash
 area-of-rectangle/
 │
-├── public/
-│
-├── src/
-│   ├── App.js
-│   ├── App.css
-│   └── index.js
-│
-├── package.json
+├── index.html
 └── README.md
 ```
 
 ---
 
-## 📦 Installation & Setup
+## ⚙️ How It Works
 
-### 1️⃣ Clone the Repository
+1. Enter the length of the rectangle.
+2. Enter the width of the rectangle.
+3. Click the **Area of Rectangle** button.
+4. The application calculates:
 
-```bash
-git clone https://github.com/your-username/area-of-rectangle.git
+```javascript
+area = length * width;
 ```
 
-### 2️⃣ Navigate to Project Folder
-
-```bash
-cd area-of-rectangle
-```
-
-### 3️⃣ Install Dependencies
-
-```bash
-npm install
-```
-
-### 4️⃣ Start Development Server
-
-```bash
-npm start
-```
-
-The application will run at:
-
-```text
-http://localhost:3000
-```
+5. The result is displayed in the Area field.
 
 ---
 
-## 🎯 Learning Outcomes
+## 🚀 Getting Started
 
-- Creating React components
-- Managing state with hooks
-- Handling user inputs
-- Updating UI dynamically
-- Performing calculations in React
-- Building beginner-friendly React applications
+### Clone the Repository
+
+```bash
+git clone https://github.com/MaithilyKawale/monorepo.git
+```
+
+### Navigate to the Project Folder
+
+```bash
+cd monorepo/area-of-rectangle
+```
+
+### Run the Project
+
+Simply open the `index.html` file in your browser.
 
 ---
 
-## 🌟 Future Enhancements
+## 🎯 Learning Objectives
 
-- 🔢 Input validation
-- 📱 Fully responsive design
-- 🌙 Dark mode support
-- 📊 Unit conversion options
-- 🎨 Improved UI/UX design
+This project helps you learn:
+
+* Creating forms with HTML
+* Styling with CSS
+* Working with JavaScript functions
+* Handling button click events
+* Accessing and updating DOM elements
+* Performing calculations using JavaScript
+
+---
+
+## 🔮 Future Enhancements
+
+* Add perimeter calculator
+* Improve error handling
+* Add a reset button
+* Support different measurement units
+* Add dark mode
+* Make the design fully responsive
 
 ---
 
@@ -183,3 +144,4 @@ http://localhost:3000
 **Happy Coding 🚀**
 
 </div>
+
